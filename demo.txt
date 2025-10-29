@@ -1,0 +1,31 @@
+Hello, this is a demo file.
+This file is for testing the grep clone.
+It has multiple lines.
+Some lines have the word 'test' and some have 'Test'.
+We need to test for case sensitivity.
+
+This line is unique.
+This line has a number: 12345
+And this line has a symbol: #example
+Here is a line with the word test repeated: test test test
+
+This line has a word in the middle.
+What about words at the end of the line? test
+Or words at the beginning: test is the word.
+
+Lines for simple pattern matching:
+The quick brown fox jumps over the lazy dog.
+A quick brown dog jumps over the lazy fox.
+Just another line.
+
+Programming languages:
+C
+Python
+C++
+JavaScript
+C#
+
+Let's check for some common words.
+hello world
+Hello again!
+goodbye
