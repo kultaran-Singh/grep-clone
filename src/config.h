@@ -4,7 +4,7 @@
 typedef struct{
     int case_insensitive;
     int line_number;
-    int revert;
+    int recurse;
     int match_count;
 }config;
 

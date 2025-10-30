@@ -7,9 +7,8 @@
 int main(int argc, char* argv[]){
     config conf = {0};
     
-    char** files = parse_args(argc, argv, &conf);
-
-    process_files(files);
+    char** source = parse_args(argc, argv, &conf);
+    process_sources(source, &conf);
 
     return 0;
 }

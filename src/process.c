@@ -1,1 +1,29 @@
+#include <string.h>
+#include <stdio.h>
+
 #include "process.h"
+#include "config.h"
+#include "output.h"
+
+void process_sources(char** sources, config* conf){
+    char* toSearch = sources[0];
+    for(int i = 1; i < 2; i++){
+        process_files(toSearch, sources[i], conf);
+    }
+}
+
+void process_files(char* toSearch, char* file, config* conf){
+
+    FILE* fptr = fopen(file, "r");
+    char buff[60];
+    int line_number = 1;
+
+    while(fgets(buff, sizeof(buff), fptr) != NULL){ //Iterate through all the lines
+        if(strstr(buff, toSearch) != NULL){
+            print_match(buff, line_number, conf);
+        }
+        line_number++;
+    }
+
+    fclose(fptr);
+}
