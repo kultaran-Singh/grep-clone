@@ -5,4 +5,6 @@
 void process_sources(char** sources, config* conf);
 void process_files(char* toSearch, char* file, config* conf);
 
+//Helper Functions
+char* lower(char* str); //Turns a string to lower case
 #endif
