@@ -2,10 +2,11 @@
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -g
+# -Isrc tells gcc to look in the 'src' folder for headers
+CFLAGS = -Wall -g -Isrc
 
 # All .c source files to be compiled
-SRCS = main.c
+SRCS = src/main.c src/match.c src/output.c src/parse_args.c src/process.c
 
 # The name of the final program
 TARGET = grep-clone-demo
