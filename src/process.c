@@ -17,6 +17,7 @@ void process_files(char* toSearch, char* file, config* conf){
     FILE* fptr = fopen(file, "r");
     char buff[60];
     int line_number = 1;
+    int matches = 0;
     
 
     while(fgets(buff, sizeof(buff), fptr) != NULL){ //Iterate through all the lines
@@ -24,12 +25,15 @@ void process_files(char* toSearch, char* file, config* conf){
             lower(buff);
             lower(toSearch);
         }
-
         if(strstr(buff, toSearch) != NULL){
             print_match(buff, line_number, conf);
+            matches++;
         }
         line_number++;
     }
+
+    if(conf->match_count == 1)
+        printf("Matches: %d\n", matches);
 
     fclose(fptr);
 }
